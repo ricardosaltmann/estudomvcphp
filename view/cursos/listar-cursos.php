@@ -1,10 +1,3 @@
-<?php
-require __DIR__ . '/../vendor/autoload.php';
-
-$entityManager = (new \Alura\Cursos\Infra\EntityManagerCreator())->getEntityManager();
-$repositorioDeCursos = $entityManager->getRepository(\Alura\Cursos\Entity\Curso::class);
-$cursos = $repositorioDeCursos->findAll();
-?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -18,7 +11,7 @@ $cursos = $repositorioDeCursos->findAll();
         <h1>Listar cursos</h1>
     </div>
 
-    <a href="formulario-novo-curso.php" class="btn btn-primary mb-2">
+    <a href="/novo-curso" class="btn btn-primary mb-2">
         Novo Curso
 
     </a>
